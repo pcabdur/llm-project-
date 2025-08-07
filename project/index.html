@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpiceVoice - Indian Food Ordering with Voice Assistant</title>
+    <meta name="description" content="Order authentic Indian food with our AI voice assistant. Simple, fast, and accessible food delivery.">
+    <meta name="keywords" content="Indian food, voice ordering, food delivery, AI assistant, dosa, biryani">
+    <meta property="og:title" content="SpiceVoice - Indian Food Ordering">
+    <meta property="og:description" content="Order authentic Indian food with our AI voice assistant">
+    <meta name="twitter:title" content="SpiceVoice - Indian Food Ordering">
+    <meta name="twitter:description" content="Order authentic Indian food with our AI voice assistant">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Predefined Tailwind CSS, use it as needed, or update base on your -->
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --saffron: #FF9933;
+            --deep-saffron: #E68A00;
+            --forest-green: #138808;
+            --light-green: #4CAF50;
+            --warm-white: #FFFEF7;
+            --spice-red: #DC2626;
+            --golden: #F59E0B;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--warm-white) 0%, #FFF8E1 100%);
+        }
+        
+        h1, h2, h3 {
+            color: var(--forest-green);
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-[var(--saffron)] hover:bg-[var(--deep-saffron)] text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200;
+        }
+        
+        .btn-secondary {
+            @apply bg-[var(--forest-green)] hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200;
+        }
+        
+        .card {
+            @apply bg-white rounded-xl p-6 shadow-lg border border-orange-100;
+        }
+        
+        .voice-button {
+            @apply bg-gradient-to-r from-[var(--saffron)] to-[var(--spice-red)] text-white p-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200;
+        }
+        
+        .food-card {
+            @apply bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-200 border border-orange-50;
+        }
+    }
+
+    @layer utilities {
+        .text-saffron {
+            color: var(--saffron);
+        }
+        
+        .text-forest-green {
+            color: var(--forest-green);
+        }
+        
+        .bg-warm-white {
+            background-color: var(--warm-white);
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/VoiceAssistant.js"></script>
+    <script type="text/babel" src="components/HeroSection.js"></script>
+    <script type="text/babel" src="components/FeaturedDishes.js"></script>
+    <script type="text/babel" src="components/CategoryGrid.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="utils/voiceService.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
